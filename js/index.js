@@ -19,3 +19,28 @@ document.getElementById("enter-btn").addEventListener("click", function () {
     element.style.animationDelay = `${randomDelay}s`;
   });
 });
+
+document.addEventListener("click", function () {
+  var audio = document.getElementById("bgAudio");
+  var content = document.getElementById("landing");
+  var overlay = document.getElementById("loadingOverlay");
+
+  audio.play().catch(function (error) {
+    console.log("Audio play failed: ", error);
+  });
+
+  audio.onplaying = function () {
+    overlay.style.transition = "opacity 1s ease";
+    overlay.style.opacity = "0";
+
+    setTimeout(function () {
+      overlay.style.display = "none";
+      content.style.display = "block";
+    }, 1000);
+  };
+
+  document.removeEventListener("click", arguments.callee);
+
+  // Hide the button after the click
+  this.style.display = "none";
+});
