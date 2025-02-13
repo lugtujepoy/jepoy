@@ -1,10 +1,9 @@
-
 onload = () => {
   const c = setTimeout(() => {
     document.body.classList.remove("not-loaded");
 
-    const titles = ('I LOVE YOU PALAGI MASLAM').split('')
-    const titleElement = document.getElementById('title');
+    const titles = "I LOVE YOU PALAGI PASANG".split("");
+    const titleElement = document.getElementById("title");
     let index = 0;
 
     function appendTitle() {

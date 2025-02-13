@@ -76,6 +76,12 @@
     letter-spacing: 20px;
   }
 }
+@media screen and (max-width: 430px) {
+  .title {
+    margin-left: 10px;
+    letter-spacing: 6px;
+  }
+}
 
 @keyframes typing {
   from {
@@ -192,7 +198,6 @@ a {
   line-height: 1.5;
 }
 
-
 @keyframes glow {
   0% {
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.6),
@@ -210,7 +215,6 @@ a {
       0 0 40px rgba(255, 255, 255, 0.2);
   }
 }
-
 
 .landing-title span {
   animation: glow 1.5s infinite alternate;
@@ -271,7 +275,8 @@ a {
 }
 .landing-title,
 .landing .image img,
-.landing p, .landing-btn {
+.landing p,
+.landing-btn {
   opacity: 0;
   animation: fadeIn 1s forwards;
 }
